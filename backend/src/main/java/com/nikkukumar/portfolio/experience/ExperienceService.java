@@ -1,0 +1,3 @@
+package com.nikkukumar.portfolio.experience;
+import java.util.List; import org.springframework.stereotype.Service; import org.springframework.transaction.annotation.Transactional;
+@Service public class ExperienceService { private final ExperienceRepository repository; public ExperienceService(ExperienceRepository repository){this.repository=repository;} @Transactional(readOnly=true) public List<ExperienceDto> getAll(){return repository.findAllByOrderByDisplayOrderAsc().stream().map(e->new ExperienceDto(e.getRole(),e.getCompany(),e.getLocation(),e.getPeriod(),List.copyOf(e.getHighlights()))).toList();} }

@@ -1,0 +1,1 @@
+export default function Education({items}){return <section id="education" className="section container"><p className="eyebrow">Education</p><h2>Academic foundation</h2>{items.map(e=><article className="education" key={e.degree}><div><h3>{e.degree}</h3><p>{e.institution}</p></div><p className="period">{e.period}</p></article>)}</section>}

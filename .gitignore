@@ -1,0 +1,12 @@
+.m2/
+backend/target/
+backend/.mvnrepo/
+backend/data/
+frontend/node_modules/
+frontend/dist/
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+*.log

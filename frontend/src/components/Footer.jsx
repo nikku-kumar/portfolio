@@ -1,0 +1,1 @@
+export default function Footer({profile}){return <footer><div className="container footer-inner"><p>© {new Date().getFullYear()} {profile.name}</p><div><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a><a href={profile.github} target="_blank" rel="noreferrer">GitHub</a></div></div></footer>}

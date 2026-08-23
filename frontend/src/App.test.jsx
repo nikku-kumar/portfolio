@@ -1,0 +1,3 @@
+import {render,screen} from '@testing-library/react'; import {beforeEach,expect,test,vi} from 'vitest'; import App from './App';
+beforeEach(()=>{global.fetch=vi.fn((url)=>Promise.resolve({ok:true,json:()=>Promise.resolve(url.endsWith('/profile')?{name:'Nikku Kumar',title:'Java Backend Developer',location:'Bangalore',email:'n@example.com',phone:'123',linkedin:'#',github:'#',summary:'Backend summary'}:[])}));});
+test('renders profile loaded from API',async()=>{render(<App/>);expect(await screen.findByRole('heading',{name:'Nikku Kumar'})).toBeInTheDocument();expect(fetch).toHaveBeenCalledWith(expect.stringContaining('/api/profile'));});

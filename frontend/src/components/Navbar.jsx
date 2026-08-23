@@ -1,0 +1,1 @@
+export default function Navbar(){return <header className="site-header"><nav className="nav container" aria-label="Primary"><a className="brand" href="#home">NK.</a><div className="nav-links">{['about','skills','experience','projects','education','contact'].map(x=><a key={x} href={`#${x}`}>{x}</a>)}</div></nav></header>}
