@@ -9,4 +9,5 @@ frontend/dist/
 !.env.example
 .idea/
 .vscode/
+.worktrees/
 *.log
