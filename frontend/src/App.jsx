@@ -11,7 +11,7 @@ import {portfolioData} from './data/portfolioData';
 
 export default function App(){
   const {profile,metrics,principles,skillGroups,experience,projects,education}=portfolioData;
-  return <div className="site-shell">
+  return <div className="site-shell" data-theme="backend-systems">
     <Navbar/>
     <main>
       <Hero profile={profile} metrics={metrics}/>

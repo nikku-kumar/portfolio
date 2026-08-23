@@ -23,3 +23,9 @@ test('shows verified professional impact',()=>{
     expect(screen.getByText(metric)).toBeInTheDocument();
   }
 });
+
+test('uses the original Backend Systems Console identity',()=>{
+  render(<App/>);
+  expect(document.querySelector('.site-shell')).toHaveAttribute('data-theme','backend-systems');
+  expect(screen.getByText(/Designed and built by Nikku Kumar/i)).toBeInTheDocument();
+});
