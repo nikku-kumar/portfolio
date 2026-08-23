@@ -1,1 +1,3 @@
-export default function Skills({groups}){return <section id="skills" className="section container"><p className="eyebrow">Toolkit</p><h2>Technical skills</h2><div className="skills-grid">{groups.map(g=><article className="skill-card" key={g.category}><h3>{g.category}</h3><div className="tags">{g.skills.map(s=><span key={s}>{s}</span>)}</div></article>)}</div></section>}
+export default function Skills({groups}){
+  return <section id="expertise" className="section container"><p className="eyebrow">Toolkit</p><h2>Engineering expertise</h2><div className="skills-grid">{groups.map(group=><article className="skill-card" key={group.category}><h3>{group.category}</h3><div className="tags">{group.skills.map(skill=><span key={skill}>{skill}</span>)}</div></article>)}</div></section>;
+}
