@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-24
 
-**Status:** Approved design direction; specification pending final review
+**Status:** Approved for implementation
 
 **Reference benchmark:** `https://amit-portfolio2.vercel.app/` (quality reference only)
 
