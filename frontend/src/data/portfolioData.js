@@ -1,5 +1,7 @@
+const publicAsset=(file)=>`${import.meta.env.BASE_URL}uploads/${file}`;
+
 export const portfolioData = {
-  profile: {name:'Nikku Kumar',role:'Java Backend Engineer',location:'Bangalore, India',email:'nikku.india05@gmail.com',phone:'8207676149',github:'https://github.com/nikku-kumar',linkedin:'https://www.linkedin.com/in/nikku-kumar-30b3a3235/',summary:'Java backend developer with 2+ years of experience building dependable APIs, workflow automation, and database-driven enterprise applications.'},
+  profile: {name:'Nikku Kumar',role:'Java Backend Engineer',location:'Bangalore, India',email:'nikku.india05@gmail.com',phone:'8207676149',github:'https://github.com/nikku-kumar',linkedin:'https://www.linkedin.com/in/nikku-kumar-30b3a3235/',profileImage:publicAsset('profile.jfif'),resume:publicAsset('Nikku-Kumar-Resume.pdf'),summary:'Java backend developer with 2+ years of experience building dependable APIs, workflow automation, and database-driven enterprise applications.'},
   metrics: [{value:'30+',label:'REST APIs delivered'},{value:'70%',label:'manual effort reduced'},{value:'25%',label:'faster API responses'},{value:'15+',label:'production issues resolved'}],
   principles: [{number:'01',title:'Reliable structure',description:'Layered services, predictable flows, and maintainable backend logic.'},{number:'02',title:'Performance thinking',description:'Queries and service paths shaped around measurable response improvements.'},{number:'03',title:'Production ownership',description:'Integration work, incident resolution, and workflows built for real operations.'}],
   skillGroups: [
