@@ -28,4 +28,8 @@ test('uses the original Backend Systems Console identity',()=>{
   render(<App/>);
   expect(document.querySelector('.site-shell')).toHaveAttribute('data-theme','backend-systems');
   expect(screen.getByText(/Designed and built by Nikku Kumar/i)).toBeInTheDocument();
+  expect(document.querySelector('.hero')).toBeInTheDocument();
+  expect(document.querySelectorAll('.project-card')).toHaveLength(2);
+  expect(document.querySelectorAll('.skill-card')).toHaveLength(6);
+  expect(document.querySelector('.contact-section')).toBeInTheDocument();
 });
