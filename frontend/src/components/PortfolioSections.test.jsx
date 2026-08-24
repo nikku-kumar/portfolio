@@ -25,3 +25,23 @@ test('uses a direct email action that works on static hosting',()=>{
   expect(screen.getByRole('link',{name:/start a conversation/i})).toHaveAttribute('href','mailto:nikku.india05@gmail.com?subject=Java%20backend%20opportunity');
   expect(screen.queryByRole('button',{name:/send message/i})).not.toBeInTheDocument();
 });
+
+test('keeps every section ready for progressive reveal',()=>{
+  render(<App/>);
+  for(const id of ['about','expertise','experience','projects','education','contact']){
+    expect(document.getElementById(id)).toHaveAttribute('data-reveal');
+  }
+});
+
+test('does not invent unavailable project actions',()=>{
+  render(<App/>);
+  const projects=document.querySelector('#projects');
+  expect(within(projects).queryByRole('link',{name:/source|live demo/i})).not.toBeInTheDocument();
+});
+
+test('preserves verified contact and social destinations',()=>{
+  render(<App/>);
+  expect(screen.getByRole('link',{name:/start a conversation/i})).toHaveAttribute('href','mailto:nikku.india05@gmail.com?subject=Java%20backend%20opportunity');
+  expect(screen.getAllByRole('link',{name:'GitHub'}).some(link=>link.getAttribute('href')==='https://github.com/nikku-kumar')).toBe(true);
+  expect(screen.getAllByRole('link',{name:'LinkedIn'}).some(link=>link.getAttribute('href')==='https://www.linkedin.com/in/nikku-kumar-30b3a3235/')).toBe(true);
+});

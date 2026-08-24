@@ -8,8 +8,10 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import {portfolioData} from './data/portfolioData';
+import {useScrollReveal} from './hooks/useScrollReveal';
 
 export default function App(){
+  useScrollReveal();
   const {profile,metrics,principles,skillGroups,experience,projects,education}=portfolioData;
   return <div className="site-shell" data-theme="backend-systems">
     <Navbar/>
